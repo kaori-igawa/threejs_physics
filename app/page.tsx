@@ -1,8 +1,7 @@
-import * as THREE from 'three';
-import { phy, math } from 'phy-engine';
+import Main from '@/app/components/main'
 
 export default function Home() {
   return (
-    <canvas></canvas>
-  );
+    <Main />
+  )
 }
