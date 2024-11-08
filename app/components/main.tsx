@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import { phy, math } from 'phy-engine';
+import { phy } from 'phy-engine';
 
 export default function Main() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -69,22 +69,6 @@ export default function Main() {
       rendererRef.current.setSize(sizes.width, sizes.height)
       rendererRef.current.setPixelRatio(window.devicePixelRatio)
     })
-
-
-    // init phy-engine
-    // phy.init({
-    //   type:'OIMO', 
-    //   worker: false,
-    //   // compact: true,
-    //   scene: sceneRef.current,
-    //   renderer: rendererRef.current,
-    //   callback:physicsReady,
-    // })
-    
-    // function physicsReady (){
-    //   phy.set({ substep:1, gravity:[0,-9.81,0], fps:60 });
-    //   phy.add({ type:'plane', size:[300,1,300], material:'shadow', visible:true });
-    // }
   }, []);
 
   return (
